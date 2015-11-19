@@ -28,7 +28,7 @@ int main(int argc, string argv[])
 		{
 			printf(" ");
 		}
-		else if (encrypt[i] < 65 || encrypt[i] > 123)
+		else if (!isalpha(encrypt[i]))
 		{
 			printf("%c", encrypt[i]);
 		}
