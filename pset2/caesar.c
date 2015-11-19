@@ -24,11 +24,7 @@ int main(int argc, string argv[])
 	int length = strlen(encrypt);
 	for (int i = 0; i < length; i++)
 	{
-		if (encrypt[i] == ' ')
-		{
-			printf(" ");
-		}
-		else if (!isalpha(encrypt[i]))
+		if (!isalpha(encrypt[i]))
 		{
 			printf("%c", encrypt[i]);
 		}
