@@ -24,17 +24,20 @@
 
 int main(int argc, string argv[])
 {
-    // TODO: comment me
+    // Check if the number of arguments is not equal to either 2 or 3
+		// and exit the program if so
     if (argc != 2 && argc != 3)
     {
         printf("Usage: generate n [s]\n");
         return 1;
     }
 
-    // TODO: comment me
+    // Convert the 2nd argument to an integer and store it in n
     int n = atoi(argv[1]);
 
-    // TODO: comment me
+    // if there are 3 arguments, use the 3rd argument
+		// to create a random long int
+		// otherwise generate a random long int from time
     if (argc == 3)
     {
         srand48((long int) atoi(argv[2]));
@@ -44,7 +47,7 @@ int main(int argc, string argv[])
         srand48((long int) time(NULL));
     }
 
-    // TODO: comment me
+    // print out a random int using drand48 times the limit
     for (int i = 0; i < n; i++)
     {
         printf("%i\n", (int) (drand48() * LIMIT));
