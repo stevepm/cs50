@@ -17,11 +17,22 @@ bool search(int value, int values[], int n)
 {
 		if (n > 0)
 		{
-			for (int i = 0; i < n; i++)
+			int start = 0;
+			int end = n-1;
+			while (start <= end)
 			{
-				if (value == values[i])
+				int half = (end + start) / 2;
+				if (values[half] == value)
 				{
 					return true;
+				}
+				else if (values[half] < value)
+				{
+					start = half + 1;
+				}
+				else
+				{
+					end = half - 1;
 				}
 			}
 		}
